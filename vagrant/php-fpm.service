@@ -1,0 +1,15 @@
+[Unit]
+Description = php-fpm service
+
+[Service]
+PIDFile = /var/run/php-fpm/php-fpm.pid
+ExecStart = /opt/php/sbin/php-fpm --fpm-config /opt/php/etc/php-fpm.conf
+
+Restart   = always
+Type      = simple
+User      = www-data
+Group     = www-data
+
+[Install]
+WantedBy = multi-user.target
+
