@@ -20,7 +20,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.provider "virtualbox" do |vb|
     vb.name = "rms-2.0-introduction"
     vb.gui = false
-    vb.customize ["modifyvm", :id, "--memory", "2048", "--cpus", "6", "--ioapic", "on"]
+    vb.customize ["modifyvm", :id, "--memory", "2048", "--cpus", "1", "--ioapic", "on"]
   end
 
   if Vagrant.has_plugin?("vagrant-proxyconf") && ENV['HTTP_PROXY']

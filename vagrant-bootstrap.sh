@@ -19,7 +19,7 @@ cd php-7.2.17/
 apt install -y libxml2-dev libbz2-dev libcurl4-openssl-dev libwebp-dev libjpeg-dev libpng-dev libxpm-dev libfreetype6-dev libgmp3-dev libreadline-dev libsnmp-dev libtidy-dev libxslt-dev snmp
 
 ./configure --prefix=/opt/php --with-libdir=lib64 --with-pic --with-bz2 --with-freetype-dir --with-png-dir --with-xpm-dir --with-gettext --with-gmp --with-iconv --with-jpeg-dir --with-curl --with-webp-dir --with-png-dir --with-openssl --with-pcre-regex --with-zlib --with-layout=GNU --enable-exif --enable-ftp --enable-sockets --with-kerberos --enable-shmop --enable-calendar --with-libxml-dir --with-mhash --with-readline --with-snmp --with-tidy --with-xsl --with-gnu-ld --enable-mysqlnd --with-mysqli=mysqlnd --with-pdo-mysql=mysqlnd --with-mysql-sock=/var/lib/mysql/mysql.sock --enable-mbstring --with-gd --enable-fpm
-make -j7
+make
 make install
 
 export PATH=$PATH:/opt/php/bin
