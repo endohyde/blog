@@ -25,6 +25,8 @@ make install
 export PATH=$PATH:/opt/php/bin
 export PATH=$PATH:/opt/php/sbin
 echo "PATH=$PATH" > /etc/environment
+echo "export PATH=$PATH:/opt/php/bin" > /etc/profile.d/php.sh
+echo "export PATH=$PATH:/opt/php/sbin" >> /etc/profile.d/php.sh
 
 cp /vagrant/vagrant/php-fpm.conf /opt/php/etc/
 cp /vagrant/vagrant/www.conf /opt/php/etc/php-fpm.d/
