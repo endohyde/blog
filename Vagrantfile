@@ -15,7 +15,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.vm.network :private_network, ip: "10.1.2.100"
 
-  config.vm.synced_folder ".", "/vagrant"
+  config.vm.synced_folder ".", "/vagrant", {:mount_options => ['dmode=777','fmode=777']}
 
   config.vm.provider "virtualbox" do |vb|
     vb.name = "rms-2.0-introduction"
