@@ -45,4 +45,5 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   end
 
   config.vm.provision :shell, :path => 'vagrant-bootstrap.sh'
+  config.vm.provision :shell, :run => 'always', :path => 'vagrant-fix-php-fpm.sh'
 end
